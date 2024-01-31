@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+          text-align: center;
+          color: #333;
+
+        }
+        .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .contact-info {
+      width: 120%;
+    }
+    .social-links {
+      width: 45%;
+      display: flex;
+      justify-content: space-around;
+    }
+    .social-links a {
+      text-decoration: none;
+      color: #333;
+      font-size: 20px;
+    }
+    .company-logo {
+      width: 45%;
+      text-align: right;
+    }
+    .company-logo {
+      text-align: center;
+    }
+    .company-logo img {
+      max-width: 100%;
+      height: auto;
+      display: block; /* Center the image */
+      margin: 0 auto; /* Center the image */
+    }
+  
+    .github-link {
+      display: flex;
+      align-items: center;
+      margin-top: 2px;
+    }
+    .github-link img {
+      width: 30px;
+      height: 30px;
+      margin-right: 2px;
+    }
+
+    @media (max-width: 768px) {
+            /* Adjustments for smaller screens */
+            .container {
+                flex-direction: column;
+            }
+
+            .contact-info,
+            .company-logo {
+                width: 100%;
+            }
+
+            .social-links {
+                width: 100%;
+            }
+
+            /* Add more media query adjustments as needed */
+        }
+
+
+        h1 {
+            color: #ffffff;
+          background:linear-gradient(to right,#ffa201, #cd104d)
+        }
+      h2 {
+      color: #15456a;
+      margin: 0;
+        background-color: #f0f0f0;
+        text-align: left;
+
+      }
+      h3 {
+        padding: 10px;
+        margin: 5px;
+      color: #15456a;
+      margin: 0;
+        text-align: left;
+
+      }
+
+      p {
+          /* Light gray background */
+          padding: 20px;
+          margin: 10px;
+        /* Add padding for better visual appeal */
+          color: #333;
+        text-align: justify;
+        
+      }
+      
+      table {
+          width: 60%;
+          border-collapse: collapse;
+          margin-top: 10px;
+        margin: auto
+      }
+
+      th, td {
+          border: 1px solid #ddd;
+          padding: 8px;
+          text-align: left;
+      }
+
+      th {
+          background-color: #3498db;
+          color: #fff;
+        text-align: justify;
+      }
+        </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Job Salaries EDA</h1>
+    </div>
+   <h2>Introduction</h2>
+    <p>In IT, data science is crucial. It uses smart tools to understand big data and make better decisions. Right now, we're figuring out the most popular job in this field. We're looking at why people chose certain jobs and places last year. This helps us understand what influences job choices and adapt to changes in the IT industry. It's essential for both professionals and businesses to stay in tune with the preferences of those navigating the world of industrial IT
+      .</p>
+  <h2>Methodology</h2>
+  <p>The analysis methodology hinges on Pandas and NumPy, complemented by the vital role of Matplotlib libraries. These tools collectively empower the exploration of job preferences, locations, and salaries. Matplotlib's pivotal contribution lies in its ability to craft clear visualizations, facilitating a comprehensive understanding of trends within the dataset. This approach fosters informed decision-making and strategic insights into the dynamics of job choices, preferred locations, and salary considerations.</p>
+  <h2>Data Overview</h2>
+    <p>The dataset consists of 607 rows and 12 columns, including pertinent variables such as work year, salary in USD, experience level, employment type, job title, employee residence, company location, and company size. These parameters provide comprehensive insights into various job-related aspects for analysis.</p>
+  <h2>Key Features</h2>
+  <table>
+      <tr>
+          <th>Name</th>
+          <th>Role</th>
+      </tr>
+      <tr>
+          <td>Job Title</td>
+          <td>Specifies the position or role held by individuals, enabling categorization and analysis of various job functions.</td>
+      </tr>
+      <tr>
+          <td>Salary in USD</td>
+          <td>Provides the monetary compensation associated with each position, allowing for the examination of salary trends.</td>
+      </tr>
+      <tr>
+          <td>Employment Type</td>
+          <td>Indicates the nature of employment, whether full-time, part-time, or contractual, influencing work arrangements.</td>
+      </tr>
+      <tr>
+          <td>Work Year</td>
+          <td>Represents the duration of employment, contributing to the understanding of workforce stability and turnover.</td>
+      </tr>
+      <tr>
+          <td>Employee Residence</td>
+          <td>Specifies the location of employees' residences, influencing considerations such as commuting and remote work.</td>
+      </tr>
+      <tr>
+          <td>Company Location</td>
+          <td>Identifies the geographic location of the employing companies, impacting factors like regional job markets</td>
+      </tr>
+      <tr>
+          <td>Company Size</td>
+          <td>Reflects the scale of the employing companies, aiding in the assessment of organizational structures and dynamics.</td>
+      </tr>
+      <tr>
+       
+
+  </table>
+
+  <h2>Data visualization</h2>
+  <h3>Experience Level</h3>
+    <p>The graph illustrates the distribution of experience levels, with the highest percentage attributed to the senior category at 46.13%. Following closely is the third intermediate level, constituting 35.09%. Junior positions make up 14.5%, and director roles represent 4.28% of the total distribution.</p>
+    <img src="https://github.com/optimizationworld/Figures-to-HTML-file/blob/main/Jobs%20salaries/experience%20level.png?raw=true" alt="Placeholder Image" style="max-width: 100%; height: auto;">
+  <h3>Top 10 jobs</h3>
+  <p>In the IT industry, pivotal roles are highlighted in the graph, emphasizing the significance of certain positions. The top roles include Data Scientist, Continuous Data Engineer, Data Analyst, and Machine Learning Engineer, with Data Scientist holding the foremost position.</p>
+  <img src="https://github.com/optimizationworld/Figures-to-HTML-file/blob/main/Jobs%20salaries/top%2010.png?raw=true"  alt="Placeholder Image" style="max-width: 100%">
+  <h3>The Top Location </h3>
+  <p>The graph indicates the significant influence of the IT industry, with the USA prominently leading. Additionally, India emerges as a notable participant, contributing significantly, even though its technological development might not be as advanced as some others.</p>
+  <img src="https://github.com/optimizationworld/Figures-to-HTML-file/blob/main/Jobs%20salaries/top%20locations.png?raw=true"  alt="Placeholder Image" style="max-width: 100%">
+  <h3>Analyzing Employee and company Locations</h3>
+  <p>Examining the geographical alignment between employee residences and company locations reveals a notable trend in the USA, where there is a significant correlation. High employee residences correspond with the concentration of company locations, suggesting a closely linked employment landscape in the country.</p>
+  <img src="https://github.com/optimizationworld/Figures-to-HTML-file/blob/main/Jobs%20salaries/employer%20locations.png?raw=true"  alt="Placeholder Image" style="max-width: 100%">
+  <h3>Work year distribution</h3>
+  <p>IT industry has experienced considerable impact over the past three years. Notably, from 2021 to 2022, there was a significant 16.7% increase, reflecting the sector's dynamic growth and evolving significance in recent times.</p>
+  <img src="https://github.com/optimizationworld/Figures-to-HTML-file/blob/main/Jobs%20salaries/work%20yeaar.png?raw=true"  alt="Placeholder Image" style="max-width: 100%">
+  <h3>Top 20 Highest salary by Job</h3>
+  <p>Examining the top 20 highest-paying jobs, it's evident that Data Engineers command the highest salaries. This preference could be attributed to their critical role in handling and structuring data. However, Data Scientists, while also commanding high salaries, hold significant impact due to their role in extracting insights.</p>
+  <img src="https://github.com/optimizationworld/Figures-to-HTML-file/blob/main/Jobs%20salaries/hightest%20salaries.png?raw=true"  alt="Placeholder Image" style="max-width: 100%">
+
+  <h2>Challenges and Limitations</h2>
+  <h3>Limited types in data</h3>
+  <p>The data only spans three years, which might not give us the whole picture. Making broad conclusions could be challenging. Additionally, since these jobs often allow remote work, the data may not fully capture the current scenario in companies.</p>
+  
+   <h2>Recommendation</h2>
+  <h3>New variables</h3>
+  <p>Introduce a new variable to gauge job demand, facilitating a better understanding of employment opportunities. This addition would enhance the analysis by considering the current and future needs of the job market.</p>
+  <h3>Job Market</h3>
+  <p>The job market varies across countries, and the analysis should consider factors that could impact it. Key considerations include economic conditions, cultural influences, government policies, and industry trends.</p>
+  <h3>Remote work</h3>
+  <p>Deepening the analysis on remote work is crucial as companies aim to reduce operational costs. Explore factors such as the prevalence of remote job opportunities, the industries embracing remote work, and the impact on employee satisfaction and productivity.</p>
+  <h2>Conclusion</h2>
+    <p>Data Science emerges as a promising career, especially for those undecided. It's popular, impactful, and versatile, involving Data Engineering, Machine Learning, and Deep Learning. Crucially, Data Science professionals can handle IT-related projects, making it an ideal choice for a diverse and dynamic skill set. As the job market evolves, recognizing the significance of Data Science can guide individuals in making informed decisions about their education and career.</p>
+<div style="text-align: left; padding: 20px; display: flex; align-items: center;">
+<div style="flex: 1; margin-right: 20px;">
+<div class="container">
+  <div class="contact-info">
+    <h2>Contact us:</h2>
+    <div class="github-link">
+      <a href="https://github.com/optimizationworld" target="_blank">
+        <img src="https://github.com/optimizationworld/Reports-Data-sciences/blob/main/git%20hub%20logo.png?raw=true" alt="GitHub Logo" style="width: 30px; height: 30px; margin-right: 2px;">
+      </a>
+      <span>optimizationworld</span>
+    </div>
+    <div class="github-link">
+      <a href="https://www.instagram.com/your_instagram_username" target="_blank">
+        <a href="https://www.instagram.com/your_instagram_username" target="_blank">
+          <img src="https://github.com/optimizationworld/Reports-Data-sciences/blob/main/phone%20logo.jpg?raw=true" alt="phone Logo" style="width: 30px; height: 30px; margin-right: 2px;">
+      </a>
+      <span>+971522878400</span>
+  </div>
+  <div class="github-link>
+    <a href="https://www.instagram.com/optimizationworld" target="_blank">
+  <img src="https://github.com/optimizationworld/Reports-Data-sciences/blob/main/instagram%20logo%202.png?raw=true" alt="Instagram Logo" style="width: 30px; height: 30px; margin-right: 2px;">
+</a>
+<span>@optimizationworld </span>
+</div>
+<div class="github-link>
+<a href="https://www.instagram.com/your_instagram_username" target="_blank">
+<img src="https://github.com/optimizationworld/Reports-Data-sciences/blob/main/mail%20logo3.png?raw=true" alt="mail Logo" style="width: 30px; height: 30px; margin-right: 2px;">
+</a>
+<span>optimizewordly@gmail.com </span>
+</div>
+  </div>
+  <div class="company-logo">
+    <img src="https://github.com/optimizationworld/Reports-Data-sciences/blob/main/WO%20logo.png?raw=true" alt="Company Logo" style="width: 300px; height: 300px;">
+  </div>
+</div>
+</div>
+</div>
+    
+</body>
+</html>
